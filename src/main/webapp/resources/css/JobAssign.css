@@ -1,0 +1,311 @@
+/* --------------- Common CSS --------------- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif !important;
+	background: linear-gradient(99deg, #F6F9FE 0%, #E8F1F8 100%);
+	overflow-y: auto !important;
+	overflow-x: hidden !important;
+	/* zoom: 80% !important; */
+	
+	
+}
+                            .alert-tooltip .ui-tooltip-text {
+	background-color: red !important;
+}
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 1rem;
+    zoom: 80%;
+}
+.NavbarZoom{
+	zoom: 80%;
+}
+.HeaderText{
+	font-size: 0.9rem;
+    color: #226d9a;
+    letter-spacing: 0.5px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+}
+.fc-toolbar-chunk{
+	zoom: 80%;
+}
+.fc .fc-toolbar-title{
+	font-size: 1.1rem;
+    color: #226d9a;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.CardPadding{
+	padding: 0.6rem;
+}
+body .fc th{
+	padding: 0rem;
+}
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 0.7rem;
+    color: #226d9a;
+}
+.fc .fc-daygrid-day-number {
+    position: relative;
+    z-index: 4;
+    padding: 4px;
+    font-size: 0.77rem;
+}
+body .fc td {
+    border: 1px solid #dee2e6;
+   
+}
+body .fc .fc-event, body .fc .fc-event .fc-event-main {
+    background: #495047 !important;
+    padding: 0.45rem 0rem;
+}
+.fc-daygrid-dot-event .fc-event-title {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 0.5rem;
+    color: white;
+}
+.pi-copy{
+	color: white;
+	font-size: 0.7rem;
+}
+.fc-direction-ltr .fc-daygrid-event .fc-event-time{
+	 font-size: 0.5rem;
+    color: white;
+}
+body .fc .fc-toolbar .fc-button {
+    background: #226d9a !important;
+    color: #ffffff;
+    border: 1px solid #e8eef154 !important;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Dialog CSS --------------- */
+body .ui-dialog {
+    padding: 0;
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    border: 0 none;
+    border-radius: 4px;
+    position: fixed !important;
+     top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; 
+    zoom:80%;
+}
+body .ui-selectonemenu-panel {
+    zoom: 80%;
+}
+body .ui-datepicker{
+	 zoom: 80%;
+}
+.ui-steps ul {
+   
+    zoom: 80%;
+}
+body .ui-widget {
+    font-size: 14px !important;
+}
+.PreNextBtnAlign{
+	 display: flex;
+    justify-content: space-between;
+}
+label{
+	margin-bottom: 0rem;
+}
+* --------------- Data Table CSS --------------- */
+
+.ui-datatable {
+	box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+	border-radius: 5px !important;
+}
+
+body .ui-datatable .ui-datatable-header {
+	font-size: 0.9rem; 
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    background: #ffffff;
+    color: #495047 !important;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+body .ui-datatable thead th {
+	background: #495047;
+	color: #ffffff;
+	font-size: 0.75rem !important;
+	font-weight: 600 !important;
+	line-height: 21px;
+	letter-spacing: 0.5px;
+	padding: 0.3em 0;
+	border: 1px solid #e9ecef;
+	border-width: 0 0 1px 0;
+	text-align: center;
+	box-sizing: content-box;
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+		box-shadow 0.2s;
+}
+
+body .ui-datatable .ui-datatable-data>tr>td {
+	padding: 0.6em 0;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-width: 0 0 1px 0;
+	word-wrap: break-word;
+	font-size: 0.75rem;
+	line-height: 21px;
+	letter-spacing: 0.3px;
+	text-align: center;
+	color: black !important;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ui-datatable-tablewrapper {
+	border-radius: 0px 0px 5px 5px !important;
+}
+
+.TableOddEvenStyle tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle tr:nth-child(even) {
+	background: #fafaff !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.TableOddEvenStyle2 tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle2 tr:nth-child(even) {
+	background: #f5f7f9 !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.TableOddEvenStyle3 tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle3 tr:nth-child(even) {
+	background: #e9ecef40 !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+/* --------------- |||||||||| --------------- */
+/* --------------- IconCSS --------------- */
+.pi-arrow-right{
+	top: 55% !important;
+}
+.pi-arrow-left{
+	top: 55% !important;
+}
+
+
+/* --------------- Scroll Bar CSS --------------- */
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px !important;
+	height: 6px !important;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: white !important;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: rgba(134, 133, 133, 0.774) !important;
+	border-radius: 10px !important;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #a3a3a3 !important;
+}
+
+
+/* --------------- |||||||||| --------------- */
+
+.LableCard{
+	background-color: #ebe8e8;
+    padding: 0.8em;
+    text-align: right;
+}
+.LableStyle{
+	font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+}
+.ui-datepicker .ui-icon{text-indent: 0 !important;}
+.AssetCard{
+	box-shadow:none !important;
+	border-bottom: 1px solid #d3cbcb6e;
+	border-left: 1px solid #d3cbcb6e;
+	border-right: 1px solid #d3cbcb6e;
+    
+}
+.StepsStyle{
+	border-top: 1px solid #d3cbcb6e;
+	border-left: 1px solid #d3cbcb6e;
+	border-right: 1px solid #d3cbcb6e;
+}
+
+/* --------------- Dialog  Header CSS --------------- */
+body .ui-dialog .ui-dialog-titlebar {
+   
+    padding: 0.9rem 1.5rem 0.3rem 1.5rem;
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+     color: #495047 !important;
+    font-size: 0.87rem;
+}
+/* --------------- Week Label CSS --------------- */
+.fc .fc-timegrid-slot-label-cushion {
+ 
+    font-size: 0.75rem;
+}
+.fc .fc-timegrid-axis-cushion {
+  
+    font-size: 0.75rem;
+}
+.UpdateBtnAlign{
+	margin-right: 2rem;
+    margin-top: 0.7rem;
+}
+/* --------------- Button Style --------------- */
+body .ui-button {
+    background: #226d9a !important;
+    color: #ffffff;
+    border: 1px solid white;
+    margin: 0;
+    outline: 0 none;
+    border-radius: 4px;
+    
+    color: white !important;
+}
+/* --------------- |||||||||| --------------- */
+.ui-icon-search{
+	top: 45% !important;
+}
+.sidenav{
+    zoom: 80%;
+}

@@ -1,0 +1,149 @@
+	body {
+		width: 100vw;
+    	height: 100vh;
+		font-family: 'Montserrat', sans-serif !important;
+		background-color: #f7f9fd8a; 
+		overflow-y: auto !important;
+		overflow-x: hidden !important;
+	}
+	
+	/*-----------Widget Style-----------*/
+	.ui-widget {
+	    font-family: 'Montserrat', sans-serif !important;
+	}
+	
+	body .ui-widget {
+	    /* font-size: 14px !important; */
+	}
+	
+	/*-----------Panel Style-----------*/
+	
+	.ui-panel .ui-panel-title {
+	    color: #1666a1;
+	}
+	
+	
+	/*-----------Wizard Style-----------*/
+	
+	body .ui-wizard .ui-wizard-step-titles .ui-wizard-step-title {
+		font-size: 14px;
+	    border: 1px solid #dbdbdb;
+	    background: #ffffff; 
+	    color: #1666a1;
+	    padding: 5px;
+	    margin: 0;
+	    border-right: 0 none;
+	    border-radius: 0;
+	}
+	
+	.ui-wizard .ui-wizard-step-titles .ui-wizard-step-title.ui-state-highlight {
+	    background: #1666a1 !important;
+	    color: white !important;
+	}
+	
+	/*-----------Button Style-----------*/
+	
+	.btn {
+		font-size: 14px !important;
+	}
+	
+	/*-----------CheckBox Style-----------*/
+	
+	body .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
+	    overflow: visible;
+	    position: absolute;
+	    left: 50%;
+	    top: 30%;
+	    margin-left: -0.5rem;
+	    margin-top: -0.5rem;
+	}
+	
+	
+	/* *************************** Data Table *************************** */	
+		
+		.ui-datatable {
+			
+		}
+		
+		.ui-datatable * {
+	     	
+		}
+	
+		.ui-datatable-data {
+			
+		}
+		
+		.ui-datatable thead th {
+			
+		}
+		
+		.ui-datatable thead th, .ui-datatable tfoot td {
+		   
+		}
+		
+		.ui-datatable-header {
+			
+		}
+		
+		.ui-datatable .ui-datatable-header {
+			
+		}
+		
+		.ui-datatable-footer {
+			
+		}
+	
+		.ui-column-title {
+			
+		}
+		    
+		.ui-datatable tr {
+		    font-size: 14px;
+		}
+		
+		.ui-datatable .ui-column-filter {
+		    
+		}
+		
+		.ui-datatable .ui-datatable-data tr.ui-state-hover.accept td {  
+		    
+		}
+		
+		.ui-datatable tbody td {
+			
+		}
+
+	 	.ui-widget-header {
+			
+		}
+
+		.ui-widget-content .ui-datatable-odd{
+
+		   
+		}
+		
+		.ui-widget-content .ui-datatable-even{
+
+		   
+		}
+
+		.ui-datatable-tablewrapper {
+		   
+		}
+		
+		
+	/* ********************************************************************************* */
+	/* ********************************************************************************* */
+	/* ********************************************************************************* */
+	
+	/*-----------Inputfield Style-----------*/
+	
+	.ui-inputfield {
+	    font-size: 14px !important;
+	}
+	
+	/*-----------Select Checkbox Menu Style-----------*/
+	
+	.ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
+	    font-size: 14px !important;
+	}

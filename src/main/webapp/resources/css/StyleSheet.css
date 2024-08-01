@@ -1,0 +1,577 @@
+/* --------------- Common CSS --------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif !important;
+	background: linear-gradient(99deg, #F6F9FE 0%, #E8F1F8 100%);
+	overflow-y: auto !important;
+	overflow-x: hidden !important;
+	/* zoom:80%; */
+	
+}
+
+
+
+body .ui-dialog {
+    padding: 0;
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    border: 0 none;
+    border-radius: 4px;
+    position: fixed !important;
+     top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; 
+}
+
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    
+}
+
+.ui-widget {
+	font-family: 'Montserrat', sans-serif !important;
+}
+/* *****************************Button Style**************************************************** */
+.btn-green.ui-button{
+	background: #21AA55 !important;
+	color:white !important;
+}
+.btn-blue.ui-button{
+	background: #02a1d4 !important;
+	color:white !important;
+}
+.btn-red.ui-button:hover{
+	background: #ef324c !important;
+	color: white !important;
+	border: 1px solid #ef324c !important;
+}
+.btn-white.ui-button{
+	background: white !important;
+	
+}
+.btn-red-icon.ui-button {
+    background: transparent !important;
+    color: #ef324c !important;
+   /*  border: 1px solid #ef324cbf !important; */
+    border-radius: 50% !important;
+    width: 2.2rem !important;
+}
+.btn-red-icon.ui-button:hover {
+    border: 1px solid #ef324cbf !important;
+}
+.btn-green-icon.ui-button{
+	background: transparent !important;
+	color: #21AA55 !important;
+	
+	border-radius: 50% !important;
+}
+.btn-blue-icon.ui-button{
+	background: transparent !important;
+	color: #68a5b9 !important;
+	
+	border-radius: 50% !important;
+}
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Card CSS --------------- */
+
+
+body .ui-card {
+	border: none !important;
+	box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+	cursor: pointer !important;
+	border-radius: 5px!important;	
+}
+
+.card {
+	border: none !important;
+	box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+	cursor: pointer !important;
+	border-radius: 5px !important;
+}
+
+.cardHeading {
+	font-size: 0.9rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 27px;
+	margin: 0px;
+}
+
+/* Change */
+.cardSubHeading {
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 21px;
+	font-weight: bold;
+}
+
+.bigNumber {
+	color: #6b36ed;
+	font-size: 2.5rem !important;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: normal;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Data Table CSS --------------- */
+
+.ui-datatable {
+	box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+	border-radius: 5px !important;
+}
+
+body .ui-datatable .ui-datatable-header {
+	font-size: 0.9rem; 
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    background: #ffffff;
+    color: #495047 !important;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    
+}
+
+body .ui-datatable thead th {
+	background: #495047;
+	color: #ffffff;
+	font-size: 0.75rem !important;
+	font-weight: 600 !important;
+	line-height: 21px;
+	letter-spacing: 0.5px;
+	padding: 0.3em 0;
+	border: 1px solid #e9ecef;
+	border-width: 0 0 1px 0;
+	text-align: center;
+	box-sizing: content-box;
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+		box-shadow 0.2s;
+}
+
+/* Change */
+body .ui-datatable .ui-datatable-data>tr>td {
+	padding: 0.6em 0;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-width: 0 0 1px 0;
+	word-wrap: break-word;
+	font-size: 0.75rem;
+	line-height: 21px;
+	letter-spacing: 0.3px;
+	text-align: center;
+	color: black !important;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+
+}
+
+.ui-datatable-tablewrapper {
+	border-radius: 0px 0px 5px 5px !important;
+}
+
+.TableOddEvenStyle tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle tr:nth-child(even) {
+	background: #fafaff !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.TableOddEvenStyle2 tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle2 tr:nth-child(even) {
+	background: #f5f7f9 !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.TableOddEvenStyle3 tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle3 tr:nth-child(even) {
+	background: #e9ecef40 !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+/* --------------- |||||||||| --------------- */
+
+
+/* --------------- Scroll Bar CSS --------------- */
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px !important;
+	height: 6px !important;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: white !important;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: rgba(134, 133, 133, 0.774) !important;
+	border-radius: 10px !important;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #a3a3a3 !important;
+}
+
+.TaskCreationBoxStyle {
+	border-radius: 10px !important;
+	border: 10px solid red !important;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- UI Diagram CSS --------------- */
+
+.ui-diagram {
+	box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+	border-radius: 5px !important;	
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Steps CSS --------------- */
+
+body .ui-steps .ui-steps-item.ui-state-highlight .ui-steps-title {
+	font-weight: 600;
+	color: #495057;
+	font-size: 0.75rem;
+	line-height: 21px;
+	letter-spacing: 0.5px;
+	color: green;
+}
+
+body .ui-steps .ui-steps-item.ui-state-highlight .ui-steps-number {
+	background: #daf9d4;
+	color: #0f7812;
+	border-color: #E3F2FD;
+}
+
+body .ui-steps .ui-steps-item .ui-menuitem-link .ui-steps-number {
+	font-size: 0.9rem;
+}
+/* Change */
+body .ui-steps .ui-steps-item .ui-menuitem-link .ui-steps-title {
+	font-size: 0.75rem;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0.5px;
+	font-weight: 600;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Select Check-Box-Menu CSS --------------- */
+
+
+body .ui-selectcheckboxmenu {
+    vertical-align: center;
+    border: 1px solid #ced4da;
+    position: relative;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+   
+    background: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+}
+
+body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-items .ui-selectcheckboxmenu-item {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    outline: 0 none;
+    background: transparent;
+    color: #495057;
+    border-radius: 0;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* --------------- |||||||||| --------------- */
+
+
+/* --------------- Select Menu CSS --------------- */
+
+/* Change */
+.ui-selectonemenu label.ui-selectonemenu-label {
+    cursor: pointer;
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+/* Change */
+.ui-selectcheckboxmenu .ui-selectcheckboxmenu-label{
+	font-weight: 600;
+	}
+body .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-items .ui-selectcheckboxmenu-item > label{
+	font-weight: 600;
+	}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight {
+    
+    font-weight: 600;
+}
+	
+	
+	
+
+body .ui-selectonemenu-panel .ui-selectonemenu-items .ui-selectonemenu-item {
+	cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.5px;	
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Tree Node CSS --------------- */
+
+/* Change */
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label {
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Dialog Box CSS --------------- */
+
+/* Change */
+.ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
+    font-weight: 600;
+    font-size: 0.75rem !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    color: #226d9a !important;
+}
+
+
+/* --------------- Calendar CSS --------------- */
+/* Change */
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+    margin: 0;
+    float: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+}
+body .fc .fc-event, body .fc .fc-event .fc-event-main{background: #495047 !important;}
+
+body .ui-card {
+	/* width: auto;height:auto !important; margin-bottom: 2em; */
+	box-shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+ui-datatable.ui-datatable-striped .ui-datatable-data>tr.ui-datatable-odd
+	{
+	background: #eaf1f1;
+}
+
+.fc-direction-ltr {
+	height: 545px;
+}
+
+.ui-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	margin-left: 20px;
+}
+
+.fc .fc-toolbar-title {
+	font-size: 18px !important;
+}
+.fc .fc-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.4em 0.65em;
+    font-size: 0.83em;
+    line-height: 1.5;
+    border-radius: 0.25em;
+}
+.fc-daygrid-dot-event .fc-event-title {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: white;
+}
+.fc-direction-ltr .fc-daygrid-event .fc-event-time {
+    margin-right: 3px;
+    font-size: 0.7rem;
+    color: white;
+    font-weight: 600;
+}
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 0.87rem;
+}
+.fc .fc-daygrid-day-number {
+    position: relative;
+    z-index: 4;
+    padding: 4px;
+    font-size: 0.87rem;
+}
+body .fc th {
+    padding: 0.7rem;
+}
+.fc .fc-toolbar-title {
+	font-size: 0.9rem !important;
+    font-weight: 600;
+}
+body .fc .fc-toolbar .fc-button{
+	background: #226d9a !important;
+	border: 1px solid #e8eef154 !important;
+	}
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Fieldset --------------- */
+body .ui-fieldset .ui-fieldset-legend {
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
+    color: #495057;
+    padding: 0.2rem;
+    font-weight: 700;
+    margin:0;
+    border-radius: 4px;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+body .ui-panelgrid .ui-panelgrid-cell {
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+    color: #495057;
+    padding: 0.55rem;
+}
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Timeline --------------- */
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-1 .vis-inner {
+    padding-left: 15px;
+    font-size: 0.87rem;
+}
+.vis-ltr .vis-label.vis-nested-group.vis-group-level-2 .vis-inner {
+    padding-left: 30px;
+    font-size: 0.87rem;
+}
+body .vis-timeline .vis-time-axis .vis-text {
+    color: #495057;
+    font-size: 0.87rem;
+}
+body .vis-timeline .vis-item .vis-item-content {
+    color: #f9fcff;
+    font-size: 0.75rem;
+}
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Calendar CSS --------------- */
+
+body .ui-confirm-popup .ui-confirm-popup-content {
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- SortData Table Header --------------- */
+body .ui-datatable thead th.ui-state-active {
+    background: #2486eb; 
+    color: #f8f9fa;
+}
+body .ui-datatable thead th.ui-state-hover {
+    background: #495047 !important; 
+    color: #f8f9fa !important;
+}
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Button Style --------------- */
+body .ui-button {
+    background: #226d9a !important;
+    color: #ffffff;
+    border: 1px solid white;
+    margin: 0;
+    outline: 0 none;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    color: white !important;
+}
+
+/* --------------- |||||||||| --------------- */
+
+/* --------------- Progressbar Style --------------- */
+	body .ui-progressbar {
+	    background: #cecece5e !important;
+	    border: 1px solid #aaaaaa47 !important;
+
+	}
+	body .ui-progressbar .ui-progressbar-value {
+	    
+	    background: #5dc2ff !important;  
+	}
+	    
+/* --------------- |||||||||| --------------- */
+
+/* --------------- HyperLink Style --------------- */
+body .ui-commandlink, body .ui-link {
+    color: #215968!important;
+	font-weight: 600 !important;
+  
+}
+/* --------------- |||||||||| --------------- */
+
+/* --------------- ToggelStyle --------------- */
+body .ui-toggleswitch.ui-toggleswitch-checked .ui-toggleswitch-slider {
+    background: #226d9a !important;
+}
+/* --------------- |||||||||| --------------- */

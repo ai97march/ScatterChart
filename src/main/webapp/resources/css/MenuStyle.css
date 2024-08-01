@@ -1,0 +1,164 @@
+/*-------------------Main Menu-----------------------*/
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+	color: #f3f7fc;
+}
+.pi-sign-out{
+	color: #D32F2F !important;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+/*-------------------Hover Color-----------------------*/
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover {
+    background: #2196F3 ;
+}
+#main {
+	transition: margin-left .5s;
+}
+/*-------------------||||-----------------------*/
+
+/*-------------------Mobile View-----------------------*/
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+/*-------------------||||-----------------------*/
+
+/*-------------------Top Bar-----------------------*/
+.LeftSideMenu{
+	    display: flex;
+    align-items: center;
+}
+
+.MainNavbar{
+	    padding: 0rem 1.5rem 0rem 1rem;
+}
+.PageName{
+	margin: 0.5rem 1rem !important;
+    align-self: center;
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 3px;
+    letter-spacing: 1px;
+    color: #515c66;
+}
+.RightSideMenu{
+	    display: flex;
+    align-items: center;
+}
+/*----------Menubar CSS------*/
+body .ui-menu {
+    padding: 0.1rem;
+    position: relative;
+    outline: 0 none;
+    background: #111 !important;
+}
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+} 
+body .ui-menu .ui-menu-list .ui-menuitem{
+	background: #111 !important;
+	}
+.ui-menu {
+    width: 17.4rem;
+}
+body .ui-menu.ui-slidemenu .ui-slidemenu-backward{
+	
+    }
+body .ui-menu.ui-slidemenu .ui-slidemenu-backward {
+    padding: 0.5rem 1rem;
+    width: 88%;
+    border: 0 none;
+    background: #007bff;
+    margin-bottom: 0;
+    border-radius: 0;
+    color: white;
+    border-radius: 2rem 0rem 0rem 2rem;
+    margin-left: 0.5rem;
+}
+    
+    
+/*----------Menubar BG color font size CSS------*/
+
+.ui-menu .ui-menuitem-link .ui-menuitem-icon, .ui-menu .ui-submenu-icon {
+    color: #dbdbdb  !important;
+}
+
+.ui-menuitem-text {
+	padding-left: 15px;
+	color: #dbdbdb  !important;
+	font-size: 1rem;
+} 
+
+.username {
+	align-self: center;
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 3px;
+    letter-spacing: 1px;
+    color: #515c66;
+}
+
+.fa-user-circle {
+	color: #2486eb !important;
+	font-size: 20px;
+}
+
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-text {
+    float: none;
+    vertical-align: middle;
+    color: #495057;
+    font-size: 12px;
+}
+body .ui-button.ui-button-danger.ui-button-flat, body .ui-splitbutton.ui-button-danger > .ui-button.ui-button-flat {
+    background-color: transparent !important;
+    
+    border-color: transparent;
+}
+body .ui-button.ui-button-info.ui-button-flat, body .ui-splitbutton.ui-button-info > .ui-button.ui-button-flat{
+	background-color: transparent !important;
+    color: #D32F2F !important;
+    border-color: transparent;
+
+}
+.pi-search{color: #226d9a !important;}
+    
+    

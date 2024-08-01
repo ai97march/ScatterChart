@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:head>
+	<title>Scatter Chart Report</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Bootstrap CSS -->
+	<h:outputStylesheet name="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+
+	<style type="text/css">
+/* Change later*/
+.searchBarUserView {
+	height: 40%;
+	width: 0px;
+	top: 45px;
+	left: 7px;
+	position: fixed;
+	visibility: hidden;
+	z-index: 1;
+	background-color: #353945;
+	overflow-x: hidden;
+	transition: 0.5s;
+	border-radius: 5px;
+}
+
+.searchBarUserView a {
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.searchBarUserView a:hover {
+	color: #ff0000;
+}
+
+.searchBarUserView .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.searchBar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+</style>
+
+	<h:outputScript name="bootstrap-4.0.0-dist/js/bootstrap.min.js" />
+	<h:outputStylesheet library="css" name="Style.css" />
+	<h:outputStylesheet library="css" name="Font.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputScript library="primefaces" name="jquery/jquery.js" />
+	<h:outputStylesheet library="css" name="StyleSheet.css" />
+	<h:outputStylesheet library="css" name="MenuStyle.css" />
+
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/all.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
+
+</h:head>
+<h:body>
+	<div id="main">
+		<h:form id="frm">
+			<div style="width: 90%; margin: auto; margin-top: 1rem;">
+				<p:panel id="scatterPanel">
+					<f:facet name="header">
+						<div
+							style="display: flex; align-items: center; justify-content: space-between;">
+							<div style="display: flex;">
+								<p:outputLabel value="PDF Testing" style="margin: 0 !important;" />
+							</div>
+						</div>
+					</f:facet>
+					<div
+						style="display: flex; justify-content: center; align-items: center">
+						<p:commandButton ajax="false" value="Download" styleClass="save"
+							icon="fa fa-file-pdf-o" update="@form">
+							<!-- <p:fileDownload value="#{downTimeLogBook.pdfFile}" /> -->
+						</p:commandButton>
+					</div>
+				</p:panel>
+			</div>
+		</h:form>
+	</div>
+</h:body>
+</html>

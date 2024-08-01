@@ -1,0 +1,96 @@
+
+
+
+
+label {
+    display: inline-block;
+     margin-bottom: 0.1rem !important;
+     font-size: 14px;
+    
+}
+
+/* ToolBar */
+.ui-toolbar-group-left, .ui-toolbar-group-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 0.4rem;
+}
+body .ui-toolbar {
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
+    color: #495057;
+    padding: 1rem;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.LeftSideText {
+    
+     margin-bottom: 0rem !important; 
+}
+.SliderHeader{
+	font-size: 14px;
+    font-weight: 500;
+}
+.ui-icon-calendar{
+	top: 42% !important;
+}
+.FooterBtn{
+	display: flex;
+    justify-content: flex-end;
+    column-gap: 0.2rem;
+    margin-right: 0.2rem;
+}
+.pi-arrow-right{top: 55% !important;}
+.pi-arrow-left{top: 55% !important;}
+.LogoImage{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LogbookName{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.HeaderRightSideText{
+	display: grid;
+    justify-items: end;
+    }
+
+body .ui-panel .ui-panel-titlebar {
+    padding: 1rem 0.5rem 0.5rem  0.5rem;
+}
+.FormDownload{
+	margin-top: 0.4rem !important;
+}
+.FooterLeftSide{
+	display: grid;
+    justify-items: start;
+}
+.FooterLeftSideText{
+	font-size: 14px;
+    font-weight: 500;
+}
+body .ui-widget {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px !important;
+}
+body .ui-datepicker .ui-datepicker-calendar td {
+     padding: 0rem;
+    text-align: center;
+}
+body .ui-datepicker .ui-datepicker-buttonbar {
+    border-top: 3px solid #dee2e6a6;
+    padding: 0.4rem 0;
+}
+body .ui-datepicker .ui-datepicker-next:hover, body .ui-datepicker .ui-datepicker-prev:hover {
+    text-decoration: none;
+}
+body .ui-panelgrid .ui-panelgrid-cell {
+    border: 1px solid #dee2e69c;
+    background: #ffffff;
+    color: #495057;
+    padding: 0.55rem;
+}

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:head>
+	<title>Scatter Chart Report</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Bootstrap CSS -->
+	<h:outputStylesheet name="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+
+	<style type="text/css">
+/* Change later*/
+.searchBarUserView {
+	max-height: 45%;
+	width: 0px;
+	top: 45px;
+	left: 7px;
+	position: fixed;
+	visibility: hidden;
+	z-index: 1;
+	background-color: #353945;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: 0.5s;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.searchBarUserView a {
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.searchBarUserView a:hover {
+	color: #ff0000;
+}
+
+.searchBarUserView .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.searchBar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	gap: 10px;
+	/* background-color: #2196F3; */
+	padding: 10px;
+}
+</style>
+
+	<!-- <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+		
+	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js">
+		
+	</script> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<h:outputScript name="bootstrap-4.0.0-dist/js/bootstrap.min.js" />
+	<h:outputStylesheet library="css" name="Style.css" />
+	<h:outputStylesheet library="css" name="Font.css" />
+	<h:outputStylesheet library="css" name="menu.css" />
+	<h:outputScript library="primefaces" name="jquery/jquery.js" />
+	<h:outputStylesheet library="css" name="StyleSheet.css" />
+	<h:outputStylesheet library="css" name="MenuStyle.css" />
+
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/all.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
+
+</h:head>
+<h:body>
+
+	<div id="main">
+		<div class="MainNavbar"
+			style="display: flex; justify-content: space-between; align-items: center; background-color: #fdfeff; box-shadow: 0 24px 64px -2px rgba(0, 0, 0, 0.02), 0 6px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.08);">
+			<div class="LeftSideMenu">
+				<p class="PageName" style="display: inline">Scatter Chart Report</p>
+				<div id="search">
+					<a onclick="toggleSearchBar()"><i class="fa fa-search"
+						aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+			<div class="RightSideMenu">
+				<i class="fa fa-user-circle" aria-hidden="true"></i>
+
+				<!-- <p:graphicImage value="resources/images/GW_Logo.png" style="height: 40px; width: 40px; margin: 3px;" /> -->
+			</div>
+		</div>
+
+		<!-- Side Search Bar  -->
+		<div id="mySidebar" class="searchBarUserView"
+			style="z-index: 1000; background: white; backdrop-filter: blur(10px); box-shadow: 0 24px 64px -2px rgba(0, 0, 0, 0.02), 0 6px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.08);">
+			<a href="javascript:void(0)" class="closebtn"
+				onclick="closeSearchBox()">×</a> <br /> <br />
+			<h:form id="frm1">
+				<div class="container-fluid">
+					<div class="row" style="margin-bottom: 5px;">
+						<div class="col-4">
+							<p:outputLabel for="fdate" value="From Date" />
+						</div>
+						<div class="col-8">
+							<p:datePicker id="fdate" value="#{scatterDashboard.fromDate}"
+								showIcon="true" yearNavigator="true" monthNavigator="true"
+								showButtonBar="true" required="true">
+								<p:ajax event="dateSelect"
+									listener="#{scatterDashboard.onDateSelect}" update="frm1" />
+							</p:datePicker>
+						</div>
+
+					</div>
+					<div class="row" style="margin-bottom: 5px;">
+						<div class="col-4">
+							<p:outputLabel for="tdate" value="To Date" />
+						</div>
+						<div class="col-8">
+							<p:datePicker id="tdate" value="#{scatterDashboard.toDate}"
+								showIcon="true" yearNavigator="true" monthNavigator="true"
+								showButtonBar="true" required="true">
+								<p:ajax event="dateSelect"
+									listener="#{scatterDashboard.onDateSelect}"
+									update="frm1:mixType" />
+							</p:datePicker>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-4">
+							<p:outputLabel for="param" value="Parameters" />
+						</div>
+						<div class="col-8">
+							<p:selectCheckboxMenu id="param" filter="true"
+								filterMatchMode="startsWith" multiple="true"
+								emptyLabel="Please select..." updateLabel="true"
+								style="min-width: 15rem" panelStyle="width: 30rem"
+								scrollHeight="250" value="#{scatterDashboard.selectedParameter}">
+								<f:selectItems value="#{scatterDashboard.parameterList}" />
+							</p:selectCheckboxMenu>
+						</div>
+					</div>
+
+					<div class="row" style="margin-bottom: 5px;">
+						<div class="col-4">
+							<p:outputLabel for="mixType" value="MixType" />
+						</div>
+						<div class="col-8">
+						<p:selectCheckboxMenu id="mixType" filter="true"
+								filterMatchMode="startsWith" multiple="true"
+								emptyLabel="Please select..." updateLabel="true"
+								style="min-width: 15rem" panelStyle="width: 30rem"
+								scrollHeight="250" value="#{scatterDashboard.selectedmixType}">
+								<f:selectItems value="#{scatterDashboard.mixTypeList}" />
+								<p:ajax event="change"
+									listener="#{scatterDashboard.onMixTypeSelect}"
+									update="frm1:recipe" />
+							</p:selectCheckboxMenu>
+						</div>
+					</div>
+
+					<div class="row" style="margin-bottom: 5px;">
+						<div class="col-4">
+							<p:outputLabel for="recipe" value="Recipe" />
+						</div>
+						<div class="col-8">
+							<p:selectCheckboxMenu id="recipe" filter="true"
+								filterMatchMode="startsWith" multiple="true"
+								emptyLabel="Please select..." updateLabel="true"
+								style="min-width: 15rem" panelStyle="width: 30rem"
+								scrollHeight="250" value="#{scatterDashboard.selectedRecipe}"
+								required="true">
+								<f:selectItems value="#{scatterDashboard.recipeList}" />
+							</p:selectCheckboxMenu>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12"
+							style="margin-bottom: 6px; margin-top: 0.7rem;">
+							<p:commandButton id="subBtn" value="Show Graph" process="frm1"
+								actionListener="#{scatterDashboard.onShowGraph}"
+								styleClass="searchPanelButton" update="frm2 frm1" />
+						</div>
+					</div>
+				</div>
+			</h:form>
+		</div>
+
+		<h:form id="frm2">
+			<div style="width: 90%; margin: auto; margin-top: 1rem;">
+				<p:panel id="scatterPanel" rendered="#{scatterDashboard.showData}">
+					<f:facet name="header">
+						<div
+							style="display: flex; align-items: center; justify-content: space-between;">
+							<div style="display: flex;">
+								<p:outputLabel value="Scatter Bar Graph"
+									style="margin: 0 !important;" />
+							</div>
+						</div>
+					</f:facet>
+					<div id="gridContainer" class="grid-container" >
+					</div>
+				</p:panel>
+			</div>
+		</h:form>
+	</div>
+
+	<script type="text/javascript">
+	
+		function closeSearchBox() {
+			document.getElementById("mySidebar").style.width = "0";
+			document.getElementById("mySidebar").style.visibility = "hidden";
+		}
+
+		function toggleSearchBar() {
+			if (document.getElementById("mySidebar").style.width != "25rem") {
+				document.getElementById("mySidebar").style.width = "25rem";
+				document.getElementById("mySidebar").style.height = "auto";
+				document.getElementById("mySidebar").style.visibility = "visible";
+			} else {
+				document.getElementById("mySidebar").style.width = "0";
+			}
+		}
+		
+		function handleScatterGraph(jsString) {
+	        /* const coursesData = #{scatterDashboard.jsString} */
+	        const coursesData = jsString;
+	        console.log("courseData => ", coursesData);
+	        
+	        const gridContainer = document.getElementById("gridContainer");
+
+	        Object.entries(coursesData).forEach(([key, items]) => {
+	          
+	          const divChart = document.createElement("div");
+	          divChart.className = "card";
+	          divChart.style= "height: 400px;";
+	          
+	          const canvas = document.createElement("canvas");
+	          canvas.id = key;
+	         /*  canvas.width = "100%"; */
+	          canvas.height = "100%";
+	          
+	          /* items.forEach((item) => console.log("color => ",item.color)); */
+
+	          const config = {
+	            type: "scatter",
+	            data: {
+	              datasets: [
+	                {
+	                  label: "Batch Value",
+	                  data: items.map((item) => ({
+	                    x: item.batchno,
+	                    y: item.value,
+	                  })),
+	                 /*  backgroundColor: "rgba(0, 127, 255, 0.8)", */
+	                  backgroundColor: items.map((item) => item.color),
+	                },
+	              ],
+	            },
+	            options: {
+	              scales: {
+	                x: {
+	                  type: "category",
+	                  position: "bottom",
+	                  title: {
+	                    display: true,
+	                    text: "Batches",
+	                  },
+	                },
+	                y: {
+	                  type: "linear",
+	                  position: "left",
+	                  title: {
+	                    display: true,
+	                    text: "Parameter Values",
+	                  },
+	                },
+	              },
+	              elements: {
+	                point: {
+	                  radius: 5,
+	                  hoverRadius: 10,
+	                },
+	              },
+	              plugins: {
+	                title: {
+	                  display: true,
+	                  text: key,
+	                },
+	              },
+	            },
+	          };
+
+	          const ctx = canvas.getContext("2d");
+
+	          const chart = new Chart(ctx, config);
+	          divChart.appendChild(canvas);
+	          gridContainer.appendChild(divChart);
+	          
+	        });
+	      }
+	</script>
+</h:body>
+</html>

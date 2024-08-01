@@ -1,0 +1,157 @@
+
+
+body{
+	
+}
+.BorderRadius{
+	    border-radius: 0.313rem !important;
+}
+.card-header {
+    padding: 0.7rem 1rem 0.55rem 1rem !important;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+/*-------Calender Style--------*/
+
+body .fc .fc-event, body .fc .fc-event .fc-event-main {
+    background: #226d9a !important;
+    padding: 0.25rem 0rem;
+}
+.fc-h-event .fc-event-title {
+    font-weight: 600;
+}
+/*-------DataTable Style--------*/
+
+.ui-datatable {
+ box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+ border-radius: 5px !important;
+}
+.fc .fc-toolbar-title{
+	font-weight: bold;
+	}
+
+
+
+body .ui-datatable .ui-datatable-data>tr>td {
+ padding: 0.6em 0;
+ border: 1px solid rgba(0, 0, 0, 0.08);
+ border-width: 0 0 1px 0;
+ word-wrap: break-word;
+font-size: 0.75rem;
+line-height: 21px;
+ letter-spacing: 0.3px;
+text-align: center;
+color: black !important;
+}
+
+
+
+.ui-datatable-tablewrapper {
+ border-radius: 0px 0px 5px 5px !important;
+}
+.CardHeader{
+	font-size: 0.95rem;
+    font-weight: 600;
+    }
+ .CardStyle{
+ 	height: 98% !important;
+}
+/*-------DataTable Style--------*/
+.DataTableStyle tr:nth-child(even) {
+	background: #fafaff !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.DataTableStyle tr:nth-child(odd) {
+	background: none !important;
+}
+.TableHeader{
+	font-size: 0.8rem !important;
+}
+.PaddingNone{
+	padding:0 !important;
+	}
+	body .fc .fc-toolbar .fc-button {
+    background: #226d9a !important;
+    border: 1px solid #e8eef154 !important;
+    font-weight: 700;
+}
+/*-------Card Style--------*/
+.cardAlign{
+	 display: flex;
+    justify-content: space-evenly;
+	}
+.CardPadding{
+	    padding: 0.6rem !important;
+	}
+.card{
+		border-radius: 0.32rem !important;
+		box-shadow: rgba(50, 50, 93, 0.12) 0px 6px 12px -2px, rgba(0, 0, 0, 0.10) 0px 3px 7px -3px !important;
+		border: 1px solid #f0f0f0 !important;
+		}
+.UpcomingCardBGColor :hover{background: #fffbf1 !important;}
+
+.RejectCardBGColor :hover{background: #f6e6e61a !important;}
+
+.ChartText{
+	display: flex !important;
+    justify-content: center !important;
+    text-align: center;
+    margin: 0.1rem 0 0 0;
+    font-size: 0.75rem;
+    
+    }
+.ChartTextNew{
+	display: flex !important;
+    justify-content: center !important;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+    background: #fffbf1;
+    }
+.p-1 {
+    padding: 0.1rem!important;
+}
+.Space{
+	
+    column-gap: 0.6rem !important;
+	}
+.LastCardStyle{
+	width: 30% !important;
+	margin-left: 0.9rem;
+	}
+.Padding{
+	padding:0 !important;
+	}
+.rowChange{
+	display: -webkit-box; 
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    
+    margin-left: -15px;
+    column-gap: 0.5rem !important;
+	}
+	.donutChartText{
+    z-index: 10 !important;
+    margin-top: -4.3rem !important;
+    }
+	/*-------Mobile View-------*/
+	@media only screen and (max-width: 600px) {
+  .rowChange {
+    flex-wrap: wrap !important;
+    margin-right: -15px;
+  }
+		@media only screen and (max-width: 600px) {
+  .MobileView {
+    margin-bottom: 0.5rem !important;
+  }
+		
+  
+		}
+	}
+	

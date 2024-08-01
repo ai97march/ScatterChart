@@ -1,0 +1,360 @@
+
+
+.ui-dialog .ui-dialog-titlebar {
+	color: #1666a1 !important;
+}
+
+body .ui-toolbar {
+    border: 1px solid #dee2e6;
+    background: white;
+    color: #495057;
+    padding: 0.7rem;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.05) 0px 6px 12px -2px, rgba(0, 0, 0, 0.02) 0px 3px 7px -3px !important;
+}
+body .ui-widget{font-size: 14px !important;}
+
+
+.floatingBtn-Admin {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+body .ui-panel .ui-panel-titlebar {
+	border: 1px solid #ffffff !important;
+	background: #ffffff !important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.ui-panel .ui-panel-title {
+     color: #495047 !important; 
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* line-height: 21px; */
+    letter-spacing: 0.5px;
+    background: #ffffff;
+    
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* line-height: 21px; */
+    letter-spacing: 0.5px;
+    color: #226d9a !important;
+}
+.pi-user-plus{
+	 
+    top: 47% !important;
+    left: 47% !important;
+}
+body .ui-wizard .ui-wizard-step-titles .ui-wizard-step-title {
+	padding: 0.5rem;
+}
+
+.UpdateBtn {
+	margin: 10px !important;
+}
+
+body .ui-panel .ui-panel-content {
+	border: none !important;
+	background: #ffffff !important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	padding: 0 !important;
+}
+
+body .ui-dialog .ui-dialog-titlebar {
+	background: ghostwhite;
+	color: #495057;
+	font-weight: 700;
+	border-bottom: 0 none;
+	padding: 1rem 0rem 0.5rem 1.6rem;
+}
+/* .pi-times:before {
+					color: #ff1616;
+				} */
+.ui-chip.custom-chip {
+	background: var(- -primary-color);
+	color: var(- -primary-color-text);
+}
+
+.floatingBtn-Admin {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	border-radius: 50% !important;
+	height:
+}
+
+body .ui-tag.ui-tag-danger {
+	background: #E71E12 !important;
+	color: #ffffff;
+	padding: 5px 9px 4px 9px !important;
+}
+
+body .ui-tag.ui-tag-info {
+	background: #0288D1;
+	color: #ffffff;
+	padding: 5px 12px 4px 10px !important;
+}
+body .ui-tag{font-weight: 600}
+
+.editUserDialog {
+	height: 80% !important;
+	overflow: scroll;
+}
+
+body .ui-dialog .ui-dialog-content {
+	background: ghostwhite;
+	color: #495057;
+	border: 0 none;
+	padding: 0 1.5rem 2rem 1.5rem;
+	border: 0 none;
+	/*  overflow: hidden; */
+}
+
+body .ui-dialog {
+	padding: 0;
+	box-shadow: 0px 11px 15px -7px rgb(0 0 0/ 20%), 0px 24px 38px 3px
+		rgb(0 0 0/ 14%), 0px 9px 46px 8px rgb(0 0 0/ 12%);
+	border: 0 none;
+	border-radius: 5px;
+	overflow: hidden;
+	/*  position: absolute;
+				top: 50% !important;
+				left: 50% !important;
+				transform: translate(-50%, -50%); */
+}
+
+body .ui-toolbar {
+	border-radius: 5px;
+}
+
+.bg-danger {
+	background-color: #dc3545 !important;
+	font-size: 85% !important;
+}
+
+.TableText {
+	width: 300px !important;
+}
+
+body .ui-chip {
+	background-color: #dee2e66b;
+	color: #495057;
+	border-radius: 16px;
+	padding: 0 0.5rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+body .ui-datatable .ui-datatable-data>tr>td {
+	/* padding: 1rem 1rem; */
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-width: 0 0 1px 0;
+	font-size: 0.9rem;
+}
+
+.ui-outputlabel {
+	padding: 9px !important
+}
+
+.card1 {
+	background-color: white !important;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: rgb(0 0 0/ 2%) 0px 0px 0px 1px, rgb(212 216 223/ 36%) 0px
+		0px 0px 1px inset !important;
+	border-radius: 5px !important;
+	/* border: 1px solid #eeedf0; */
+}
+
+.card2 {
+	background-color: white !important;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: rgb(0 0 0/ 2%) 0px 0px 0px 1px, rgb(212 216 223/ 36%) 0px
+		0px 0px 1px inset !important;
+	border-radius: 5px !important;
+}
+
+.AddUserCard {
+	background-color: white !important;
+	width: 60%;
+	box-shadow: rgb(0 0 0/ 2%) 0px 0px 0px 1px, rgb(212 216 223/ 36%) 0px
+		0px 0px 1px inset !important;
+	border-radius:5px !important;
+	margin-top: 0.8rem;
+}
+
+.AddUserCard tr:nth-child(odd) {
+	background: none !important;
+}
+
+.AddUserCard tr:nth-child(even) {
+	background: #fafaff !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.card1 tr:nth-child(odd) {
+	background: White !important;
+}
+
+.card1 tr:nth-child(even) {
+	background: #fafaff !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
+
+.card3 {
+	background-color: white !important;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: rgb(0 0 0/ 2%) 0px 0px 0px 1px, rgb(212 216 223/ 36%) 0px
+		0px 0px 1px inset !important;
+	border-radius: 5px !important;
+}
+
+.card4 {
+	padding: 0px 15px 0px 15px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 !important;
+}
+
+.WorkFlowPage {
+	background: white;
+	box-shadow: rgb(0 0 0/ 2%) 0px 0px 0px 1px, rgb(212 216 223/ 36%) 0px
+		0px 0px 1px inset !important;
+	border-radius: 5px;
+	width: 30% !important;
+	margin-right: 5px;
+}
+
+.WorkflowCardStyle {
+	margin: 0px 10px 10px 10px !important
+}
+
+.G360CardStyle {
+	margin: 0px 10px 10px 10px !important
+}
+
+.G360Page {
+	background: white;
+	box-shadow: rgb(0 0 0/ 2%) 0px 0px 0px 1px, rgb(212 216 223/ 36%) 0px
+		0px 0px 1px inset !important;
+	border-radius: 5px;
+	width: 70% !important;
+	margin-left: 5px;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 0.2rem;
+	margin-top: 0.2rem;
+}
+
+body .ui-button.ui-state-active {
+	background: #689F38 !important;
+	border-color: #0b7ad1;
+	color: #ffffff;
+}
+
+body .ui-selectbooleanbutton {
+	background: #E71E12 !important;
+	color: white !important
+}
+
+.PopStyle {
+	width: 50% !important;
+	height: 80% !important;
+	overflow: auto !important;
+	/* position: absolute !important; */
+	/* top: 50% !important; */
+	/* left: 50% !important; */
+	/* transform: translate(-50%, -50%) !important; */
+	-webkit-animation: scale-in-top 0.5s
+		cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+		both;
+	
+}
+
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+	margin: 0;
+	float: none;
+	
+}
+
+body .ui-button.ui-button-icon-only {
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 50% !important;
+}
+
+.CreateBtn {
+	background: #0674cc;
+	color: white !important;
+	padding: 6px 12px;
+	border-radius: 8px;
+	text-decoration: none !important;
+}
+
+.CreateTable {
+	margin: 10px 0px 10px 0px;
+}
+
+.TopBadgeSpace {
+	margin-left: 0.3rem;
+}
+.newBtnStyle{   
+	margin-top: -0.5rem !important;
+    margin-left: -0.5rem !important;
+	
+}
+.ui-icon-check{    top: 47% !important;}
+
+.Infoheader {
+	font-weight: 600;
+	font-size: 1rem;
+	margin: 0;
+	color: #226d9a !important;
+}
+body .ui-wizard .ui-wizard-step-titles .ui-wizard-step-title{
+	font-size: 0.87rem !important;
+	background: white;
+	}
+body .ui-wizard .ui-wizard-step-titles .ui-wizard-step-title.ui-state-highlight {
+    background: #226d9a;
+    color: white;
+}
+body .ui-chkbox .ui-chkbox-box.ui-state-active {
+    border-color: #226d9a;
+    background: #226d9a;
+    color: #ffffff;
+}
+body .ui-chkbox {
+    margin: 0.15rem 0rem !important;
+}
+body .ui-chkbox .ui-chkbox-box.ui-state-active.ui-state-hover{
+    border-color: #226d9a;
+    background: #226d9a !important;
+    color: #ffffff;
+}
+.ui-button-text ui-c {
+	background: green !important
+}
+body .ui-button.ui-button-icon-only .ui-icon {
+    margin-top: -0.42rem !important;
+    margin-left: -0.45rem !important;
+}
+.TableOddEvenStyle tr:nth-child(odd) {
+	background: none !important;
+}
+
+.TableOddEvenStyle tr:nth-child(even) {
+	background: #fafaff !important;
+	border-top: 1px solid #ecebebb5 !important;
+	border-bottom: 1px solid #ecebebb5 !important;
+}
