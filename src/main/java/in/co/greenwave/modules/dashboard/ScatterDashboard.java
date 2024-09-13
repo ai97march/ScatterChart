@@ -258,6 +258,7 @@ public class ScatterDashboard implements Serializable{
 	public void onMixTypeSelect() {
 		System.out.println("ScatterDashboard.onMixTypeSelect()..");
 		selectedRecipe = new ArrayList<String>();
+		System.out.println("selectedmixType change => " + selectedmixType);
 		recipeList = vesiviusdao.getRecipeList(fromDate, toDate, selectedmixType.stream().collect(Collectors.joining(",")));
 		//		System.out.println("date test => "+ dfDt.format(fromDate)+" <=> "+dfDt.format(event.getObject()));
 		//        FacesContext facesContext = FacesContext.getCurrentInstance();
@@ -281,7 +282,10 @@ public class ScatterDashboard implements Serializable{
 
 	public void onToggleSelect(ToggleSelectEvent event) {
 		System.out.println("ScatterDashboard.onToggleSelect()..");
-
+		System.out.println("selectedmixType toggle => " + selectedmixType);
+		selectedRecipe = new ArrayList<String>();
+		recipeList = vesiviusdao.getRecipeList(fromDate, toDate, selectedmixType.stream().collect(Collectors.joining(",")));
+		System.out.println("recipeList toggle => " + recipeList);
 	}
 
 	public void onItemSelect(SelectEvent event) {
@@ -290,7 +294,7 @@ public class ScatterDashboard implements Serializable{
 	}
 
 	public void onItemUnselect(UnselectEvent event) {
-
+		System.out.println("ScatterDashboard.onItemUnselect()..");
 	}
 
 	public Date getFromDate() {

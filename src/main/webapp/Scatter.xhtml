@@ -48,7 +48,7 @@
 .searchBarUserView .closebtn {
 	position: absolute;
 	top: 0;
-	right: 25px;
+	right: 22px;
 	font-size: 36px;
 	margin-left: 50px;
 }
@@ -182,6 +182,7 @@
 								<p:ajax event="change"
 									listener="#{scatterDashboard.onMixTypeSelect}"
 									update="frm1:recipe" />
+								<p:ajax event="toggleSelect" listener="#{scatterDashboard.onToggleSelect}" update="frm1:recipe"/>
 							</p:selectCheckboxMenu>
 						</div>
 					</div>
