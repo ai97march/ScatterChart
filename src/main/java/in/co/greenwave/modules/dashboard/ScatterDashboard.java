@@ -9,6 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -77,6 +78,15 @@ public class ScatterDashboard implements Serializable{
 		showData = false;
 
 		parameterList = vesiviusdao.getParameterList();
+		
+		fromDate = new Date();
+		
+		toDate = new Date();
+		
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(toDate);
+		cal.add(Calendar.DATE, -30);
+		fromDate = cal.getTime();
 		
 //		System.out.println("defaultParameter => "+ defaultParameter);
 		

@@ -95,7 +95,7 @@ public class ReportService implements ReportableDAO {
 		List<String> mixTypeList = new ArrayList<String>();
 		try {
 			con = SQLServerDAOFactory.createVesuviusConnection();
-			pstmt = con.prepareStatement("select mixtype from dbo.udtvf_select_mixtype(?,?)");
+			pstmt = con.prepareStatement("select mixtype from dbo.udtvf_select_mixtype(?,?) order by mixtype");
 			pstmt.setString(1, dfDt.format(fromDate));
 			pstmt.setString(2, dfDt.format(toDate));
 			ResultSet rs = pstmt.executeQuery();
@@ -121,7 +121,7 @@ public class ReportService implements ReportableDAO {
 		List<String> recipeList = new ArrayList<String>();
 		try {
 			con = SQLServerDAOFactory.createVesuviusConnection();
-			pstmt = con.prepareStatement("select Recipe from dbo.udtvf_select_recipe(?,?,?)");
+			pstmt = con.prepareStatement("select Recipe from dbo.udtvf_select_recipe(?,?,?) order by Recipe");
 			pstmt.setString(1, dfDt.format(fromDate));
 			pstmt.setString(2, dfDt.format(toDate));
 			pstmt.setString(3, mixType);
