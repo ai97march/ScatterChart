@@ -22,7 +22,8 @@ public class ReportService implements ReportableDAO {
 	Connection con = null;
 	PreparedStatement pstmt = null;
 	CallableStatement cstmt = null;
-
+    
+	/* Fetch scatter graph data from store procedure scatterplot_1(?,?,?,?,?)*/
 	@Override
 	public List<ScatterData> getScatterGraphData(Date fromDate, Date toDate, String parameters, String selectedmixType,
 			String recipes) {
@@ -64,7 +65,8 @@ public class ReportService implements ReportableDAO {
 		}
 		return scatterDataList;
 	}
-
+    
+	/* Fetch parameter list from database using function udtvf_select_parameters_scatter_graph() */
 	@Override
 	public List<String> getParameterList() {
 		List<String> parameterList = new ArrayList<String>();
@@ -90,6 +92,7 @@ public class ReportService implements ReportableDAO {
 		return parameterList;
 	}
 
+	/* Fetch Mix Type list from database using function udtvf_select_mixtype(?,?) */
 	@Override
 	public List<String> getMixTypeList(Date fromDate, Date toDate) {
 		List<String> mixTypeList = new ArrayList<String>();
@@ -116,6 +119,7 @@ public class ReportService implements ReportableDAO {
 		return mixTypeList;
 	}
 
+	/* Fetch Recipe list from database using function udtvf_select_recipe(?,?,?) */
 	@Override
 	public List<String> getRecipeList(Date fromDate, Date toDate, String mixType) {
 		List<String> recipeList = new ArrayList<String>();

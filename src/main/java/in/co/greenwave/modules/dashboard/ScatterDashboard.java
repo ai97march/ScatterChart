@@ -42,26 +42,39 @@ public class ScatterDashboard implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/** Multiple DAO's */
 	DAOFactory factory;
 	ReportableDAO vesiviusdao;
 
+	/** This variable is used to map "From Date" of user input form data*/
 	private Date fromDate;
+	/** This variable is used to map "To Date" of user input form data*/
 	private Date toDate;
+	/** List to store "Selected Parameter" of user input form data*/
 	private List<String> selectedParameter;	
+	/** List to show parameter list in user input form*/
 	private List<String> parameterList;
-	private List<String> selectedRecipe;	
+	/** List to store "Selected Recipe" of user input form data*/
+	private List<String> selectedRecipe;
+	/** List to show recipe list in user input form*/
 	private List<String> recipeList;
-	private List<String> selectedmixType;	
+	/** List to store "Selected MixType" of user input form data*/
+	private List<String> selectedmixType;
+	/** List to show mix type list in user input form*/
 	private List<String> mixTypeList;
+	/** For formatting date type to string type or vice-versa*/
 	DateFormat dfDt = new SimpleDateFormat("yyyy-MM-dd");
+	/** A boolean variable to render scatter chart*/
 	boolean showData;
+	/** This variable is used to map chart related data from database*/
 	private Map<String,List<ScatterXYData>> scatterDataMap;
+	/** This variable is used to convert scatterDataMap values to json string*/
 	private String jsString;
 
 	@PostConstruct
 	private void init() {
 		System.out.println("ScatterDashboard.init()..");
-		/*connection with the database as per the properties file 'token.properties'*/
+		/*get configuration related values from properties file 'token.properties'*/
 		InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("token.properties");
 		Properties prop = new Properties();
 		String defaultParameter = null;
@@ -79,10 +92,13 @@ public class ScatterDashboard implements Serializable{
 
 		parameterList = vesiviusdao.getParameterList();
 		
+		/* initialize fromDate*/
 		fromDate = new Date();
-		
+		/* initialize toDate*/
 		toDate = new Date();
 		
+		/* Create a Calendar instance and set it to the specified date (toDate).
+		 * Then, subtract 30 days from this date to calculate the fromDate. */
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(toDate);
 		cal.add(Calendar.DATE, -30);
@@ -96,6 +112,7 @@ public class ScatterDashboard implements Serializable{
 //				"Dryer Inlet Temperature (deg C)", "Furfural Temperature (deg C)", "Morton Mixer RTD-1 Temperature (deg C)",
 //				"Surge Hopper Temperature(deg C)", "Tube Dryer Flow Diff(CFM)", "Tube Dryer Temperature Diff(deg C)"));
 		
+		/* For converting comma separated defaultParameter into list type*/
 		selectedParameter = Arrays.stream(defaultParameter.split(",")).map(String::trim).collect(Collectors.toList());
 
 		System.out.println(selectedParameter);
@@ -107,6 +124,8 @@ public class ScatterDashboard implements Serializable{
 		//				System.out.println("date test => "+ dfDt.format(fromDate)+" <=> "+dfDt.format(toDate));
 		scatterDataMap = new LinkedHashMap<>();
 		jsString = "";
+		/*if fromDate, toDate, selectedmixType, and selectedRecipe are not null then it will execute a script to close
+		 * user input form*/
 		if(fromDate != null && toDate != null && selectedmixType != null && selectedRecipe != null) {
 			System.out.println(fromDate+" = "+toDate+" = "+selectedmixType+" = "+selectedRecipe);
 			PrimeFaces.current().executeScript("closeSearchBox();");
@@ -114,6 +133,7 @@ public class ScatterDashboard implements Serializable{
 			//			System.out.println(joinedStringWithStream);
 		}
 
+		/* To retrieve all scatter data from database*/
 		List<ScatterData> scatterDataList = vesiviusdao.getScatterGraphData(fromDate,toDate,
 				selectedParameter == null ? " ":selectedParameter.stream().collect(Collectors.joining(",")),
 						selectedmixType.stream().collect(Collectors.joining(",")),
@@ -132,6 +152,8 @@ public class ScatterDashboard implements Serializable{
 //		scatterDataMap.put("Tube Dryer Flow Diff(CFM)", new ArrayList<ScatterXYData>());
 //		scatterDataMap.put("Tube Dryer Temperature Diff(deg C)", new ArrayList<ScatterXYData>());
 
+		/* Formatting the data of scatterDataList into scatterDataMap in a desired way so that later on
+		 * we could map the data of scatterDataMap to json string*/
 		for(ScatterData sd : scatterDataList) {
 			if(scatterDataMap.containsKey(sd.getParameter())){
 				scatterDataMap.get(sd.getParameter()).add(new ScatterXYData(sd.getBatchno(), sd.getValue(), sd.getColor()));
@@ -153,6 +175,7 @@ public class ScatterDashboard implements Serializable{
 		ObjectMapper objectMapper = new ObjectMapper();
 
 		try {
+			/* Converting the scatterDataMap to jsString*/
 			jsString = objectMapper.writeValueAsString(scatterDataMap);
 //			System.out.println("jsString => "+jsString);
 		} catch (Exception e) {
@@ -214,7 +237,7 @@ public class ScatterDashboard implements Serializable{
 				+ "	                new Chart(ctx, config);\r\n"
 				+ "	        \r\n"
 				+ "	        });";
-
+        /* This javascript function will generate scatter chart graph based on jsString*/
 		PrimeFaces.current().executeScript("handleScatterGraph("+jsString+");");
 		showData = true;
 	}
@@ -265,6 +288,7 @@ public class ScatterDashboard implements Serializable{
 		return jsonArray.toString();
 	}
 
+	/* Ajax call to set recipe list based on Mix Type Select */
 	public void onMixTypeSelect() {
 		System.out.println("ScatterDashboard.onMixTypeSelect()..");
 		selectedRecipe = new ArrayList<String>();
@@ -276,6 +300,7 @@ public class ScatterDashboard implements Serializable{
 		//        facesContext.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Date Selected", format.format(event.getObject())));
 	}
 
+	/* Ajax call to set Mix Type List based on fromDate and toDate */
 	public void onDateSelect(SelectEvent<Date> event) {
 		System.out.println("ScatterDashboard.onDateSelect()..");
 		//		System.out.println(dfDt.format(event.getObject()));
@@ -290,6 +315,7 @@ public class ScatterDashboard implements Serializable{
 		//        facesContext.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Date Selected", format.format(event.getObject())));
 	}
 
+	/* Ajax call to set Recipe List based on fromDate, toDate and selectedmixType */
 	public void onToggleSelect(ToggleSelectEvent event) {
 		System.out.println("ScatterDashboard.onToggleSelect()..");
 		System.out.println("selectedmixType toggle => " + selectedmixType);
